@@ -1,0 +1,6 @@
+@LocusAPI_HostAddress = http://localhost:5236
+
+GET {{LocusAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

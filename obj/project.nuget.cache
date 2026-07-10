@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "EfbAdsSeCrI=",
+  "dgSpecHash": "1NbP4ErTm0U=",
   "success": true,
   "projectFilePath": "/Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/LocusAPI.csproj",
   "expectedPackageFiles": [
-    "/Users/malinsundberg/.nuget/packages/microsoft.aspnetcore.openapi/9.0.5/microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512",
     "/Users/malinsundberg/.nuget/packages/microsoft.extensions.apidescription.server/9.0.0/microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
     "/Users/malinsundberg/.nuget/packages/microsoft.openapi/2.7.5/microsoft.openapi.2.7.5.nupkg.sha512",
     "/Users/malinsundberg/.nuget/packages/swashbuckle.aspnetcore/10.2.3/swashbuckle.aspnetcore.10.2.3.nupkg.sha512",

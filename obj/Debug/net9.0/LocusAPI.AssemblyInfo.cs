@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LocusAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3856976c89fd610063e003e8da0e15a0886f07a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1308ae39209a4c1cd254e7cb7ed0f1f38b27b8de")]
 [assembly: System.Reflection.AssemblyProductAttribute("LocusAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LocusAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

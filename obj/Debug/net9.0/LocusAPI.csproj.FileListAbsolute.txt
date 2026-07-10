@@ -54,3 +54,4 @@
 /Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/obj/Debug/net9.0/LocusAPI.pdb
 /Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/obj/Debug/net9.0/LocusAPI.genruntimeconfig.cache
 /Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/obj/Debug/net9.0/ref/LocusAPI.dll
+/Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/obj/Debug/net9.0/LocusAPI.sourcelink.json

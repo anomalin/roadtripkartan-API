@@ -42,8 +42,10 @@ builder.Services.AddCors(options =>
     });
 });
 
-var app = builder.Build();
 
+
+var app = builder.Build();
+app.UseCors("AllowFrontend");
 
 
 // Configure the HTTP request pipeline.
@@ -55,7 +57,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("ViteDev");
+//app.UseCors("ViteDev");
 
 //app.UseAuthorization();
 app.MapControllers();

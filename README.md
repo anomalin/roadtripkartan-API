@@ -2,13 +2,6 @@
 
 ASP.NET Core (.NET 9) Web API that proxies and normalises three public cultural-heritage APIs for the [roadtripkartan](../README.md) client.
 
-## Why a proxy?
-
-Three reasons:
-
-1. **CORS.** The upstream APIs aren't all CORS-friendly for browsers, and even where they are, we want one origin to talk to from the SPA.
-2. **Polite client identity.** MusicBrainz in particular requires a meaningful `User-Agent` and enforces rate limits; we set that once in DI.
-3. **Shape normalisation.** Each upstream returns its own format (K-Samsök is XML, the others JSON). The API maps everything to small flat DTOs that the client consumes verbatim.
 
 ## Run
 
@@ -17,7 +10,7 @@ dotnet run
 ```
 
 
-## DI wiring
+## Wiring
 
 `Program.cs` registers three named `HttpClient`s via `IHttpClientFactory`:
 
@@ -27,7 +20,7 @@ dotnet run
 | `MusicBrainz` | `https://musicbrainz.org` | 30s | `Accept: application/json`, `User-Agent: Roadtripkartan/1.0 (portfolio project)` |
 | `Litteraturbanken` | `https://litteraturbanken.se` | 15s | `Accept: application/json` |
 
-CORS policy `ViteDev` whitelists `http://roadtripkartan.se`.
+CORS policy whitelists `http://roadtripkartan.se`.
 
 ## Endpoints
 

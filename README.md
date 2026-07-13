@@ -1,6 +1,6 @@
-# LocusAPI
+# RoadtripkartanAPI
 
-ASP.NET Core (.NET 9) Web API that proxies and normalises three public cultural-heritage APIs for the [Locus](../README.md) client.
+ASP.NET Core (.NET 9) Web API that proxies and normalises three public cultural-heritage APIs for the [roadtripkartan](../README.md) client.
 
 ## Why a proxy?
 
@@ -16,7 +16,6 @@ Three reasons:
 dotnet run
 ```
 
-The API listens on `http://localhost:5236` (see `Properties/launchSettings.json`). OpenAPI is mapped only in `Development`.
 
 ## DI wiring
 
@@ -25,10 +24,10 @@ The API listens on `http://localhost:5236` (see `Properties/launchSettings.json`
 | Registered name | Base address | Timeout | Default headers |
 | --- | --- | --- | --- |
 | `KSamsok` | *(none)* | 10s | `Accept: application/xml` |
-| `MusicBrainz` | `https://musicbrainz.org` | 30s | `Accept: application/json`, `User-Agent: Locus/1.0 (portfolio project)` |
+| `MusicBrainz` | `https://musicbrainz.org` | 30s | `Accept: application/json`, `User-Agent: Roadtripkartan/1.0 (portfolio project)` |
 | `Litteraturbanken` | `https://litteraturbanken.se` | 15s | `Accept: application/json` |
 
-CORS policy `ViteDev` whitelists `http://localhost:5173`.
+CORS policy `ViteDev` whitelists `http://roadtripkartan.se`.
 
 ## Endpoints
 
@@ -149,10 +148,6 @@ Pulls a slice of Litteraturbanken's e-text catalog and filters locally by author
 
 Returns the raw Litteraturbanken JSON for a random 300-item window. Development only.
 
-### `GET /api/weatherforecast`
-
-Default ASP.NET template endpoint. Currently kept; consider removing before production.
-
 ## Models
 
 ```csharp
@@ -185,14 +180,6 @@ public record SiteResult(
 
 ## Error handling
 
-Errors are deliberately thin: upstream non-2xx statuses are returned with a short message, and JSON/XML parse failures are caught and logged to `Console.WriteLine`. There's no structured logging, no Polly retry/circuit-breaker, and no correlation IDs. If this graduates beyond a portfolio project, that's where to look first.
+Errors are deliberately thin: upstream non-2xx statuses are returned with a short message, and JSON/XML parse failures are caught and logged to `Console.WriteLine`. There's no structured logging, no Polly retry/circuit-breaker, and no correlation IDs. If this graduates beyond a portfolio project, that's where I will start working.
 
-## Known gotchas
 
-- **K-Samsök client has no `BaseAddress`.** Works today because `SitesController` calls the absolute URL, but it's inconsistent with the other two clients and easy to break.
-- **`app.UseAuthorization()` is commented out.** Intentional for now; the API is public.
-- **`AllowedHosts: "*"`** in `appsettings.json` — fine for dev, should be tightened for production.
-- **`/api/weatherforecast`** is leftover from the template.
-- **CORS only allows `http://localhost:5173`.** Production frontend origin needs to be added in `Program.cs`.
-
-See [`../deploy-checklist.md`](../deploy-checklist.md) for the full list.

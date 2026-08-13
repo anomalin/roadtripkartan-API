@@ -34,7 +34,6 @@
 /Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/bin/Debug/net9.0/LocusAPI.runtimeconfig.json
 /Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/bin/Debug/net9.0/LocusAPI.dll
 /Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/bin/Debug/net9.0/LocusAPI.pdb
-/Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
 /Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/bin/Debug/net9.0/Microsoft.OpenApi.dll
 /Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/obj/Debug/net9.0/LocusAPI.csproj.AssemblyReference.cache
 /Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/obj/Debug/net9.0/LocusAPI.GeneratedMSBuildEditorConfig.editorconfig
@@ -55,3 +54,6 @@
 /Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/obj/Debug/net9.0/LocusAPI.genruntimeconfig.cache
 /Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/obj/Debug/net9.0/ref/LocusAPI.dll
 /Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/obj/Debug/net9.0/LocusAPI.sourcelink.json
+/Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/malinsundberg/Portfolio/Roadtripkartan-API/LocusAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll

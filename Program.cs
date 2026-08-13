@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
 
 
@@ -29,13 +30,21 @@ builder.Services.AddHttpClient("Litteraturbanken", client =>
     client.Timeout = TimeSpan.FromSeconds(15);
 });
 
+builder.Services.AddHttpClient("Europeana", client =>
+{
+    client.BaseAddress = new Uri("https://api.europeana.eu");
+    client.DefaultRequestHeaders.Add("Accept", "application/json");
+    client.Timeout = TimeSpan.FromSeconds(15);
+});
+
 
 // Add CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:5173",
+        policy.WithOrigins("http://localhost:5174",
+        "https://localhost:5174",
         "https://roadtripkartan.se",
         "https://www.roadtripkartan.se")
         .AllowAnyHeader()
